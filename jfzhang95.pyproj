@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{b401311f-dd63-4477-b160-4645c4479c21}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>pytorch-deeplab-xception\train.py</StartupFile>
+    <SearchPath>..\..\..\Documents\IDS Lab\DeepLearning Dataset\pascal\VOCdevkit\VOC2012</SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>CondaEnv|CondaEnv|DeepLabV3+</InterpreterId>
+    <CommandLineArguments>
+    </CommandLineArguments>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+    <IsWindowsApplication>False</IsWindowsApplication>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="pytorch-deeplab-xception\dataloaders\custom_transforms.py" />
+    <Compile Include="pytorch-deeplab-xception\dataloaders\datasets\cityscapes.py" />
+    <Compile Include="pytorch-deeplab-xception\dataloaders\datasets\coco.py" />
+    <Compile Include="pytorch-deeplab-xception\dataloaders\datasets\combine_dbs.py" />
+    <Compile Include="pytorch-deeplab-xception\dataloaders\datasets\pascal.py" />
+    <Compile Include="pytorch-deeplab-xception\dataloaders\datasets\sbd.py" />
+    <Compile Include="pytorch-deeplab-xception\dataloaders\datasets\__init__.py" />
+    <Compile Include="pytorch-deeplab-xception\dataloaders\utils.py" />
+    <Compile Include="pytorch-deeplab-xception\dataloaders\__init__.py" />
+    <Compile Include="pytorch-deeplab-xception\doc\deeplab_resnet.py" />
+    <Compile Include="pytorch-deeplab-xception\doc\deeplab_xception.py" />
+    <Compile Include="pytorch-deeplab-xception\modeling\aspp.py" />
+    <Compile Include="pytorch-deeplab-xception\modeling\backbone\drn.py" />
+    <Compile Include="pytorch-deeplab-xception\modeling\backbone\mobilenet.py" />
+    <Compile Include="pytorch-deeplab-xception\modeling\backbone\resnet.py" />
+    <Compile Include="pytorch-deeplab-xception\modeling\backbone\xception.py" />
+    <Compile Include="pytorch-deeplab-xception\modeling\backbone\__init__.py" />
+    <Compile Include="pytorch-deeplab-xception\modeling\decoder.py" />
+    <Compile Include="pytorch-deeplab-xception\modeling\deeplab.py" />
+    <Compile Include="pytorch-deeplab-xception\modeling\sync_batchnorm\batchnorm.py" />
+    <Compile Include="pytorch-deeplab-xception\modeling\sync_batchnorm\comm.py" />
+    <Compile Include="pytorch-deeplab-xception\modeling\sync_batchnorm\replicate.py" />
+    <Compile Include="pytorch-deeplab-xception\modeling\sync_batchnorm\unittest.py" />
+    <Compile Include="pytorch-deeplab-xception\modeling\sync_batchnorm\__init__.py" />
+    <Compile Include="pytorch-deeplab-xception\modeling\__init__.py" />
+    <Compile Include="pytorch-deeplab-xception\mypath.py" />
+    <Compile Include="pytorch-deeplab-xception\train.py" />
+    <Compile Include="pytorch-deeplab-xception\utils\calculate_weights.py" />
+    <Compile Include="pytorch-deeplab-xception\utils\loss.py" />
+    <Compile Include="pytorch-deeplab-xception\utils\lr_scheduler.py" />
+    <Compile Include="pytorch-deeplab-xception\utils\metrics.py" />
+    <Compile Include="pytorch-deeplab-xception\utils\saver.py" />
+    <Compile Include="pytorch-deeplab-xception\utils\summaries.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="pytorch-deeplab-xception\doc\results.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="pytorch-deeplab-xception" />
+    <Folder Include="pytorch-deeplab-xception\dataloaders" />
+    <Folder Include="pytorch-deeplab-xception\dataloaders\datasets" />
+    <Folder Include="pytorch-deeplab-xception\doc" />
+    <Folder Include="pytorch-deeplab-xception\modeling" />
+    <Folder Include="pytorch-deeplab-xception\modeling\backbone" />
+    <Folder Include="pytorch-deeplab-xception\modeling\sync_batchnorm" />
+    <Folder Include="pytorch-deeplab-xception\utils" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="CondaEnv|CondaEnv|DeepLabV3+" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
